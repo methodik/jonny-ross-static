@@ -1,0 +1,12 @@
+div.pageContainer { position: relative; margin: 0 auto; }
+
+header[role=banner] { padding: 2em .5rem;
+	#logo { width: 95%; margin: 0 auto; display: block; }
+	nav { width: 14rem; display: block; margin: 1.5rem auto; overflow: hidden;
+		& > a { float: left; }
+		& > a + a { float: right; }
+	}
+	div.social-container { width: 8rem; @include justify-container; margin: 0 auto; height: 2rem;
+		img { @include justify-child(auto, 0); height: 100%; }
+	}
+}

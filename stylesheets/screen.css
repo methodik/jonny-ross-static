@@ -1,0 +1,243 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../Downloads/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* line 22, ../../../../Downloads/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, ../../../../Downloads/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, ../../../../Downloads/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 28, ../../../../Downloads/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 30, ../../../../Downloads/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, ../../../../Downloads/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, ../../../../Downloads/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, ../../../../Downloads/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+@font-face {
+  font-family: 'cabin';
+  src: url("/fonts/cabin-regular-webfont.eot");
+  src: url("/fonts/cabin-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/cabin-regular-webfont.woff") format("woff"), url("/fonts/cabin.ttf") format("truetype"), url("/fonts/cabin-regular-webfont.svg#cabinregular") format("svg");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'nexa-bold';
+  src: url("/fonts/nexa_bold-webfont-webfont-webfont.eot");
+  src: url("/fonts/nexa_bold-webfont-webfont-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/nexa_bold-webfont-webfont-webfont.woff") format("woff"), url("/fonts/nexa_bold-webfont-webfont-webfont.ttf") format("truetype"), url("/fonts/nexa_bold-webfont-webfont-webfont.svg#nexa_boldregular") format("svg");
+  font-weight: 100;
+  font-style: normal; }
+
+/* line 57, ../sass/base.scss */
+.motif {
+  padding-left: 1em; }
+  /* line 58, ../sass/base.scss */
+  .motif:before {
+    content: url(/img/polygon.svg);
+    margin-right: .5rem;
+    position: absolute;
+    bottom: .1rem;
+    left: 0; }
+
+/* line 63, ../sass/base.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: white; }
+
+/* line 64, ../sass/base.scss */
+body, html {
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+  background: url(/img/grunge-texture.jpg);
+  font-family: cabin; }
+
+/* line 66, ../sass/base.scss */
+h1, h2, h3 {
+  position: relative;
+  font-family: nexa-bold, helvetica neue;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 2.25rem;
+  line-height: 3rem;
+  color: white; }
+
+/* line 67, ../sass/base.scss */
+h2 {
+  font-size: 1.5em; }
+
+/* line 68, ../sass/base.scss */
+p {
+  font-family: helvetica neue;
+  font-size: 1rem;
+  line-height: 1.3875rem; }
+
+/* line 69, ../sass/base.scss */
+a {
+  text-decoration: none; }
+
+/* line 70, ../sass/base.scss */
+img {
+  max-width: 100%; }
+
+/* line 72, ../sass/base.scss */
+footer.site-footer {
+  background: black;
+  padding: 1.3rem; }
+
+/* line 73, ../sass/base.scss */
+input[type=text], textarea {
+  background: #212121;
+  border: none;
+  outline: black;
+  height: 1.5em; }
+
+/* line 1, ../sass/layout.scss */
+div.pageContainer {
+  position: relative;
+  margin: 0 auto; }
+
+/* line 3, ../sass/layout.scss */
+header[role=banner] {
+  padding: 2em .5rem; }
+  /* line 4, ../sass/layout.scss */
+  header[role=banner] #logo {
+    width: 95%;
+    margin: 0 auto;
+    display: block; }
+  /* line 5, ../sass/layout.scss */
+  header[role=banner] nav {
+    width: 14rem;
+    display: block;
+    margin: 1.5rem auto;
+    overflow: hidden; }
+    /* line 6, ../sass/layout.scss */
+    header[role=banner] nav > a {
+      float: left; }
+    /* line 7, ../sass/layout.scss */
+    header[role=banner] nav > a + a {
+      float: right; }
+  /* line 9, ../sass/layout.scss */
+  header[role=banner] div.social-container {
+    width: 8rem;
+    font-size: 0.1px;
+    text-align: justify;
+    margin: 0 auto;
+    height: 2rem; }
+    /* line 46, ../sass/base.scss */
+    header[role=banner] div.social-container:after {
+      content: '';
+      display: inline-block;
+      width: 100%; }
+    /* line 10, ../sass/layout.scss */
+    header[role=banner] div.social-container img {
+      display: inline-block;
+      width: auto;
+      padding-bottom: 0;
+      height: 100%; }
+
+/* line 3, ../sass/modules.scss */
+header.title {
+  margin: .5rem auto;
+  width: 100%;
+  overflow: hidden;
+  width: 90%; }
+  /* line 4, ../sass/modules.scss */
+  header.title h1.line-right:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #cccccc;
+    position: absolute;
+    margin-left: .75em;
+    top: 50%;
+    margin-top: -.35rem;
+    margin-right: .5rem; }
+  /* line 5, ../sass/modules.scss */
+  header.title p {
+    font-size: 11px;
+    color: #cccccc;
+    margin-top: 1em; }
+
+/* line 8, ../sass/modules.scss */
+a[role=button], input[type=submit] {
+  font-family: nexa-bold;
+  background: #e85d5d;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=69);
+  opacity: 0.69;
+  border: none;
+  text-transform: uppercase;
+  padding: .7em;
+  width: 6rem;
+  display: inline-block;
+  text-align: center;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+  /* line 9, ../sass/modules.scss */
+  a[role=button]:hover, input[type=submit]:hover {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+    opacity: 0.9;
+    -webkit-box-shadow: inset 0 -1.5px #874040;
+    -moz-box-shadow: inset 0 -1.5px #874040;
+    box-shadow: inset 0 -1.5px #874040; }
+
+/* line 12, ../sass/modules.scss */
+.contentBox {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1em;
+  -webkit-box-shadow: 0 0 18px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 0 18px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.75); }
