@@ -1,4 +1,7 @@
-div.pageContainer { position: relative; margin: 0 auto; }
+div.pageContainer { position: relative; margin: 0 auto;
+	width: 90%;
+}
+div.row {  }
 
 // header
 header[role=banner] { padding: 2em .5rem;
@@ -27,7 +30,10 @@ article.contentBox { padding: 0 0 2rem 0; width: 95%; display: block; margin: 1r
 	h1 { background: url(/img/diagonal-light.gif); width: 100%; padding: .5rem 1rem 0 1rem; } // use jQuery plugin to target last words
 	p { padding: 1rem; }
 }
-footer[role=contentinfo] { position: absolute; bottom: 0; left: 0; width: 40%; background: url(/img/diagonal-dark.gif); height: 1.5rem; }
+footer[role=contentinfo] { position: absolute; bottom: 0; left: 0; width: 10rem; background: url(/img/diagonal-dark.gif); height: 1.5rem; padding-left: 1rem; @include opacity(.85);
+	i { float: left; margin-right: .5rem; }
+	p.calendar { display: inline-block; float: left; padding: 0; font-size: .6rem; }
+}
 
 
 // footer 

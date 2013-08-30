@@ -154,37 +154,38 @@ input[type=text], textarea {
 /* line 1, ../sass/layout.scss */
 div.pageContainer {
   position: relative;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 90%; }
 
-/* line 4, ../sass/layout.scss */
+/* line 7, ../sass/layout.scss */
 header[role=banner] {
   padding: 2em .5rem; }
-  /* line 5, ../sass/layout.scss */
+  /* line 8, ../sass/layout.scss */
   header[role=banner] #logo {
     width: 95%;
     margin: 0 auto;
     display: block;
     max-width: 42rem; }
-  /* line 6, ../sass/layout.scss */
+  /* line 9, ../sass/layout.scss */
   header[role=banner] nav {
     width: 14rem;
     display: block;
     margin: 1.5rem auto;
     overflow: hidden; }
     @media only screen and (max-device-width: 480px) {
-      /* line 6, ../sass/layout.scss */
+      /* line 9, ../sass/layout.scss */
       header[role=banner] nav {
         font-size: 178%; } }
-    /* line 8, ../sass/layout.scss */
+    /* line 11, ../sass/layout.scss */
     header[role=banner] nav a[role=button] {
       width: 6rem; }
-    /* line 9, ../sass/layout.scss */
+    /* line 12, ../sass/layout.scss */
     header[role=banner] nav > a {
       float: left; }
-    /* line 10, ../sass/layout.scss */
+    /* line 13, ../sass/layout.scss */
     header[role=banner] nav > a + a {
       float: right; }
-  /* line 12, ../sass/layout.scss */
+  /* line 15, ../sass/layout.scss */
   header[role=banner] div.social-container {
     width: 8rem;
     font-size: 0.1px;
@@ -196,14 +197,14 @@ header[role=banner] {
       content: '';
       display: inline-block;
       width: 100%; }
-    /* line 13, ../sass/layout.scss */
+    /* line 16, ../sass/layout.scss */
     header[role=banner] div.social-container img {
       display: inline-block;
       width: auto;
       margin-bottom: 0;
       height: 100%; }
 
-/* line 18, ../sass/layout.scss */
+/* line 21, ../sass/layout.scss */
 .contentBox {
   background: rgba(0, 0, 0, 0.5);
   position: relative;
@@ -213,44 +214,57 @@ header[role=banner] {
   padding: 5%;
   margin-bottom: 1rem; }
 
-/* line 26, ../sass/layout.scss */
+/* line 29, ../sass/layout.scss */
 article.contentBox {
   padding: 0 0 2rem 0;
   width: 95%;
   display: block;
   margin: 1rem auto; }
-  /* line 27, ../sass/layout.scss */
+  /* line 30, ../sass/layout.scss */
   article.contentBox h1 {
     background: url(/img/diagonal-light.gif);
     width: 100%;
     padding: .5rem 1rem 0 1rem; }
-  /* line 28, ../sass/layout.scss */
+  /* line 31, ../sass/layout.scss */
   article.contentBox p {
     padding: 1rem; }
 
-/* line 30, ../sass/layout.scss */
+/* line 33, ../sass/layout.scss */
 footer[role=contentinfo] {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 40%;
+  width: 10rem;
   background: url(/img/diagonal-dark.gif);
-  height: 1.5rem; }
+  height: 1.5rem;
+  padding-left: 1rem;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
+  opacity: 0.85; }
+  /* line 34, ../sass/layout.scss */
+  footer[role=contentinfo] i {
+    float: left;
+    margin-right: .5rem; }
+  /* line 35, ../sass/layout.scss */
+  footer[role=contentinfo] p.calendar {
+    display: inline-block;
+    float: left;
+    padding: 0;
+    font-size: .6rem; }
 
-/* line 34, ../sass/layout.scss */
+/* line 40, ../sass/layout.scss */
 footer.site-footer {
   border-top: 0.25rem #2e2e2e solid; }
-  /* line 36, ../sass/layout.scss */
+  /* line 42, ../sass/layout.scss */
   footer.site-footer div.about-me {
     margin-bottom: 1em;
     padding-bottom: 2em; }
-    /* line 37, ../sass/layout.scss */
+    /* line 43, ../sass/layout.scss */
     footer.site-footer div.about-me a[role=button] {
       margin-top: 1em; }
-  /* line 41, ../sass/layout.scss */
+  /* line 47, ../sass/layout.scss */
   footer.site-footer div.contact section.contact-details span {
     text-transform: uppercase; }
-  /* line 42, ../sass/layout.scss */
+  /* line 48, ../sass/layout.scss */
   footer.site-footer div.contact section.contact-details p {
     margin-bottom: 1.25rem; }
 
@@ -305,49 +319,77 @@ a.arrow-right:after {
     left: 0; }
 
 /* line 16, ../sass/modules.scss */
+i {
+  display: block;
+  height: 2rem;
+  width: 1.5rem;
+  display: inline-block; }
+
+/* line 17, ../sass/modules.scss */
+i.facebook {
+  background: url(/img/like.svg) 50% 25% no-repeat; }
+
+/* line 18, ../sass/modules.scss */
+i.calendar {
+  background: url(/img/calendar.svg) 50% 25% no-repeat; }
+
+/* line 19, ../sass/modules.scss */
+p.calendar:before {
+  content: url(/img/calendar.svg);
+  display: inline-block;
+  width: 1.5rem;
+  height: 2rem;
+  position: relative;
+  margin-top: 1px; }
+
+/* line 22, ../sass/modules.scss */
 header.title {
   margin: .5rem auto;
   width: 100%;
   overflow: hidden;
   width: 90%; }
-  /* line 17, ../sass/modules.scss */
+  @media only screen and (min-width: 647px) {
+    /* line 22, ../sass/modules.scss */
+    header.title {
+      width: 100%; } }
+  /* line 24, ../sass/modules.scss */
   header.title h1.line-right:after, header.title h1.line-right-left:after, header.title h1.line-right-left:before {
     content: '';
     width: 100%;
     height: 2px;
     background: #cccccc; }
-  /* line 18, ../sass/modules.scss */
+  /* line 25, ../sass/modules.scss */
   header.title h1.line-right:after {
     margin-left: .5em;
     position: absolute;
     top: 50%;
     margin-top: -.35rem; }
-  /* line 19, ../sass/modules.scss */
+  /* line 26, ../sass/modules.scss */
   header.title h1.line-right-left {
     text-align: center;
     display: inline-block;
     margin: 1em auto;
     width: 100%;
     float: left; }
-    /* line 20, ../sass/modules.scss */
+    /* line 27, ../sass/modules.scss */
     header.title h1.line-right-left:after {
       display: inline-block;
       width: 20%;
       float: right;
       margin-top: .5em; }
-    /* line 21, ../sass/modules.scss */
+    /* line 28, ../sass/modules.scss */
     header.title h1.line-right-left:before {
       display: inline-block;
       width: 20%;
       float: left;
       margin-top: .5em; }
-  /* line 24, ../sass/modules.scss */
+  /* line 31, ../sass/modules.scss */
   header.title p {
     font-size: 11px;
     color: #cccccc;
     margin-top: -.75rem; }
 
-/* line 28, ../sass/modules.scss */
+/* line 35, ../sass/modules.scss */
 ul.thumbGrid {
   width: 100%;
   margin: 0 auto;
@@ -359,24 +401,28 @@ ul.thumbGrid {
     content: '';
     display: inline-block;
     width: 100%; }
-  /* line 29, ../sass/modules.scss */
+  /* line 36, ../sass/modules.scss */
   ul.thumbGrid li {
     display: inline-block;
     width: 47.5%;
     margin-bottom: 5%;
     position: relative; }
-    /* line 31, ../sass/modules.scss */
+    @media only screen and (min-width: 647px) {
+      /* line 36, ../sass/modules.scss */
+      ul.thumbGrid li {
+        width: 23%; } }
+    /* line 39, ../sass/modules.scss */
     ul.thumbGrid li img {
       -webkit-transition: all 0.3s ease;
       -moz-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
       transition: all 0.3s ease;
       width: 100%; }
-      /* line 32, ../sass/modules.scss */
+      /* line 40, ../sass/modules.scss */
       ul.thumbGrid li img:hover {
         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
         opacity: 0.75; }
-    /* line 34, ../sass/modules.scss */
+    /* line 42, ../sass/modules.scss */
     ul.thumbGrid li span {
       position: absolute;
       left: 0;
@@ -390,7 +436,7 @@ ul.thumbGrid {
       z-index: 200;
       font-size: 11px;
       line-height: 1.5rem; }
-  /* line 37, ../sass/modules.scss */
+  /* line 45, ../sass/modules.scss */
   ul.thumbGrid + a {
     text-align: center;
     display: block;
@@ -398,6 +444,6 @@ ul.thumbGrid {
     width: 6rem;
     margin: 0 auto;
     padding: .25rem 0; }
-    /* line 38, ../sass/modules.scss */
+    /* line 46, ../sass/modules.scss */
     ul.thumbGrid + a:hover {
       border-bottom: 1px #e85d5d solid; }
