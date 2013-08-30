@@ -1,5 +1,5 @@
 div.pageContainer { position: relative; margin: 0 auto;
-	width: 90%;
+	@media #{$golf} { width: 90%; }
 }
 div.row {  }
 

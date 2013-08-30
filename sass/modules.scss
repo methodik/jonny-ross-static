@@ -18,16 +18,21 @@ i.facebook { background: url(/img/like.svg) 50% 25% no-repeat; }
 i.calendar { background: url(/img/calendar.svg) 50% 25% no-repeat; }
 p.calendar:before { content: url(/img/calendar.svg); display: inline-block; width: 1.5rem; height: 2rem; position: relative; margin-top: 1px; }
 
-// column titles
 header.title { margin: .5rem auto; width: 100%; overflow: hidden; width: 90%;
 	@media #{$golf} { width: 100%; }
-	h1.line-right:after, h1.line-right-left:after, h1.line-right-left:before { content: ''; width: 100%; height: 2px; background: $grey-light;  }
-	h1.line-right:after { margin-left: .5em; position: absolute; top: 50%; margin-top: -.35rem; }
-	h1.line-right-left { text-align: center; display: inline-block; margin: 1em auto; width: 100%; float: left;
-		&:after { display: inline-block; width: 20%; float: right; margin-top: .5em; }
-		&:before { display: inline-block; width: 20%; float: left; margin-top: .5em; }
-	}
 	
+	h1:after, h1:before { content: ''; width: 100%; height: 2px; background: $grey-light; }
+
+	&.line-right {
+		@media #{$golf} { width: 60%; margin-left: 0; }
+		h1:after { margin-left: .5em; position: absolute; top: 50%; margin-top: -.35rem; }
+	}
+	&.line-right-left {
+		h1 { text-align: center; display: inline-block; margin: 1em auto; width: 100%; float: left; }
+		h1:before { display: inline-block; width: 20%; float: left; margin-top: .5em; }
+		h1:after { display: inline-block; width: 20%; float: right; margin-top: .5em; }
+	}
+
 	p { font-size: 11px; color: $grey-light; margin-top: -.75rem; }
 }
 

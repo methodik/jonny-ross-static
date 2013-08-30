@@ -154,8 +154,11 @@ input[type=text], textarea {
 /* line 1, ../sass/layout.scss */
 div.pageContainer {
   position: relative;
-  margin: 0 auto;
-  width: 90%; }
+  margin: 0 auto; }
+  @media only screen and (min-width: 647px) {
+    /* line 1, ../sass/layout.scss */
+    div.pageContainer {
+      width: 90%; } }
 
 /* line 7, ../sass/layout.scss */
 header[role=banner] {
@@ -342,54 +345,59 @@ p.calendar:before {
   position: relative;
   margin-top: 1px; }
 
-/* line 22, ../sass/modules.scss */
+/* line 21, ../sass/modules.scss */
 header.title {
   margin: .5rem auto;
   width: 100%;
   overflow: hidden;
   width: 90%; }
   @media only screen and (min-width: 647px) {
-    /* line 22, ../sass/modules.scss */
+    /* line 21, ../sass/modules.scss */
     header.title {
       width: 100%; } }
   /* line 24, ../sass/modules.scss */
-  header.title h1.line-right:after, header.title h1.line-right-left:after, header.title h1.line-right-left:before {
+  header.title h1:after, header.title h1:before {
     content: '';
     width: 100%;
     height: 2px;
     background: #cccccc; }
-  /* line 25, ../sass/modules.scss */
-  header.title h1.line-right:after {
+  @media only screen and (min-width: 647px) {
+    /* line 26, ../sass/modules.scss */
+    header.title.line-right {
+      width: 60%;
+      margin-left: 0; } }
+  /* line 28, ../sass/modules.scss */
+  header.title.line-right h1:after {
     margin-left: .5em;
     position: absolute;
     top: 50%;
     margin-top: -.35rem; }
-  /* line 26, ../sass/modules.scss */
-  header.title h1.line-right-left {
+  /* line 31, ../sass/modules.scss */
+  header.title.line-right-left h1 {
     text-align: center;
     display: inline-block;
     margin: 1em auto;
     width: 100%;
     float: left; }
-    /* line 27, ../sass/modules.scss */
-    header.title h1.line-right-left:after {
-      display: inline-block;
-      width: 20%;
-      float: right;
-      margin-top: .5em; }
-    /* line 28, ../sass/modules.scss */
-    header.title h1.line-right-left:before {
-      display: inline-block;
-      width: 20%;
-      float: left;
-      margin-top: .5em; }
-  /* line 31, ../sass/modules.scss */
+  /* line 32, ../sass/modules.scss */
+  header.title.line-right-left h1:before {
+    display: inline-block;
+    width: 20%;
+    float: left;
+    margin-top: .5em; }
+  /* line 33, ../sass/modules.scss */
+  header.title.line-right-left h1:after {
+    display: inline-block;
+    width: 20%;
+    float: right;
+    margin-top: .5em; }
+  /* line 36, ../sass/modules.scss */
   header.title p {
     font-size: 11px;
     color: #cccccc;
     margin-top: -.75rem; }
 
-/* line 35, ../sass/modules.scss */
+/* line 40, ../sass/modules.scss */
 ul.thumbGrid {
   width: 100%;
   margin: 0 auto;
@@ -401,28 +409,28 @@ ul.thumbGrid {
     content: '';
     display: inline-block;
     width: 100%; }
-  /* line 36, ../sass/modules.scss */
+  /* line 41, ../sass/modules.scss */
   ul.thumbGrid li {
     display: inline-block;
     width: 47.5%;
     margin-bottom: 5%;
     position: relative; }
     @media only screen and (min-width: 647px) {
-      /* line 36, ../sass/modules.scss */
+      /* line 41, ../sass/modules.scss */
       ul.thumbGrid li {
         width: 23%; } }
-    /* line 39, ../sass/modules.scss */
+    /* line 44, ../sass/modules.scss */
     ul.thumbGrid li img {
       -webkit-transition: all 0.3s ease;
       -moz-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
       transition: all 0.3s ease;
       width: 100%; }
-      /* line 40, ../sass/modules.scss */
+      /* line 45, ../sass/modules.scss */
       ul.thumbGrid li img:hover {
         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
         opacity: 0.75; }
-    /* line 42, ../sass/modules.scss */
+    /* line 47, ../sass/modules.scss */
     ul.thumbGrid li span {
       position: absolute;
       left: 0;
@@ -436,7 +444,7 @@ ul.thumbGrid {
       z-index: 200;
       font-size: 11px;
       line-height: 1.5rem; }
-  /* line 45, ../sass/modules.scss */
+  /* line 50, ../sass/modules.scss */
   ul.thumbGrid + a {
     text-align: center;
     display: block;
@@ -444,6 +452,6 @@ ul.thumbGrid {
     width: 6rem;
     margin: 0 auto;
     padding: .25rem 0; }
-    /* line 46, ../sass/modules.scss */
+    /* line 51, ../sass/modules.scss */
     ul.thumbGrid + a:hover {
       border-bottom: 1px #e85d5d solid; }
