@@ -1,12 +1,45 @@
 div.pageContainer { position: relative; margin: 0 auto; }
 
+// header
 header[role=banner] { padding: 2em .5rem;
-	#logo { width: 95%; margin: 0 auto; display: block; }
+	#logo { width: 95%; margin: 0 auto; display: block; max-width: 42rem; }
 	nav { width: 14rem; display: block; margin: 1.5rem auto; overflow: hidden;
+		@media #{$polo} { font-size: 178%; }
+		a[role=button] { width: 6rem; }
 		& > a { float: left; }
 		& > a + a { float: right; }
 	}
 	div.social-container { width: 8rem; @include justify-container; margin: 0 auto; height: 2rem;
 		img { @include justify-child(auto, 0); height: 100%; }
+	}
+}
+
+// main content
+.contentBox { background: $black-transparent; position: relative; @include drop-shadow; padding: 5%; margin-bottom: 1rem; }
+div.col-container {
+	div.col-3 {  }
+}
+
+
+
+// articles
+article.contentBox { padding: 0 0 2rem 0; width: 95%; display: block; margin: 1rem auto;
+	h1 { background: url(/img/diagonal-light.gif); width: 100%; padding: .5rem 1rem 0 1rem; } // use jQuery plugin to target last words
+	p { padding: 1rem; }
+}
+footer[role=contentinfo] { position: absolute; bottom: 0; left: 0; width: 40%; background: url(/img/diagonal-dark.gif); height: 1.5rem; }
+
+
+// footer 
+footer.site-footer { border-top: .25rem lighten($grey-dark, 5%) solid;
+	div.container {  }
+	div.about-me { margin-bottom: 1em; padding-bottom: 2em;
+		a[role=button] { margin-top: 1em }
+	}
+	div.contact {
+		section.contact-details { 
+			span { text-transform: uppercase; }
+			p { margin-bottom: 1.25rem; }
+		}
 	}
 }

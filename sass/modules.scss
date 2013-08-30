@@ -1,14 +1,26 @@
 // modules styling
 
 // buttons
-a[role=button], input[type=submit] { font-family: nexa-bold; background: $accent; @include border-radius(8px); @include opacity(.69); border: none; text-transform: uppercase; padding: .7em; width: 6rem; display: inline-block; text-align: center; @include transition(all .2s ease);
-	&:hover { @include opacity(.9); @include box-shadow(inset 0 -1.5px $accent-dark); }
+a[role=button], input[type=submit] { font-family: Trebuchet MS; font-weight: bold; letter-spacing: 2px; background: $accent; @include border-radius(8px); background: rgba(232, 93, 93, .7); border: none; text-transform: uppercase; padding: .7em; display: inline-block; text-align: center; @include transition(all .2s ease); font-size: .875rem;
+	&:hover { background: rgba(232, 93, 93, .8); @include box-shadow(inset 0 -1.5px $accent-dark); }
+}
+a.arrow-right:after { content: url('/img/arrow-right.gif'); position: relative; margin-left: .5em; }
+
+.motif { padding-left: 1em;
+	@media #{$polo} { padding-left: 1.75em; }
+
+	&:before { content: url(/img/polygon.svg); margin-right: .5rem; position: absolute; bottom: .1rem; left: 0; }
 }
 
-// main header
+// column titles
 header.title { margin: .5rem auto; width: 100%; overflow: hidden; width: 90%;
-	h1.line-right:after { content: ''; width: 100%; height: 2px; background: $grey-light; position: absolute; margin-left: .75em; top: 50%; margin-top: -.35rem; margin-right: .5rem; }	
-h1.line-right-left:after, h1.line-right-left:before { /* line styles either side */ }
+	h1.line-right:after, h1.line-right-left:after, h1.line-right-left:before { content: ''; width: 100%; height: 2px; background: $grey-light;  }
+	h1.line-right:after { margin-left: .5em; position: absolute; top: 50%; margin-top: -.35rem; }
+	h1.line-right-left { text-align: center; display: inline-block; margin: 1em auto; width: 100%; float: left;
+		&:after { display: inline-block; width: 20%; float: right; margin-top: .5em; }
+		&:before { display: inline-block; width: 20%; float: left; margin-top: .5em; }
+	}
+	
 	p { font-size: 11px; color: $grey-light; margin-top: -.75rem; }
 }
 
@@ -16,7 +28,7 @@ h1.line-right-left:after, h1.line-right-left:before { /* line styles either side
 ul.thumbGrid { width: 100%; margin: 0 auto; display: block; @include justify-container;
 	li { @include justify-child(47.5%, 5%); position: relative;
 		
-		img { @include transition(all 0.3s ease);
+		img { @include transition(all 0.3s ease); width: 100%;
 			&:hover { @include opacity(.75); }
 		}
 		span { position: absolute; left: 0; right: 0; bottom: 0; height: 1.5rem; background: url(/img/diagonal-dark.gif); color: white; text-align: left; padding-left: .5rem; z-index: $layer-2; font-size: 11px; line-height: 1.5rem; }
@@ -28,15 +40,7 @@ ul.thumbGrid { width: 100%; margin: 0 auto; display: block; @include justify-con
 	}
 }
 
-// columns
-.contentBox { background: $black-transparent; @include drop-shadow; padding: 5%; margin-bottom: 1rem; }
-div.col-container {
-	div.col-3 {  }
-}
 
-// articles
 
-article.contentBox { padding: 0; width: 95%; display: block; margin: 1rem auto;
-	h1 { background: url(/img/diagonal-light.gif); width: 100%; padding: .5rem 1rem 0 1rem; } // use jQuery plugin to target last words
-	p { padding: 1rem; }
-}
+
+

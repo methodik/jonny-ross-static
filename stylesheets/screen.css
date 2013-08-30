@@ -59,80 +59,92 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block; }
 
 @font-face {
-  font-family: 'cabin';
-  src: url("/fonts/cabin-regular-webfont.eot");
-  src: url("/fonts/cabin-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/cabin-regular-webfont.woff") format("woff"), url("/fonts/cabin.ttf") format("truetype"), url("/fonts/cabin-regular-webfont.svg#cabinregular") format("svg");
-  font-weight: 100;
-  font-style: normal; }
-
-@font-face {
   font-family: 'nexa-bold';
   src: url("/fonts/nexa_bold-webfont-webfont-webfont.eot");
   src: url("/fonts/nexa_bold-webfont-webfont-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/nexa_bold-webfont-webfont-webfont.woff") format("woff"), url("/fonts/nexa_bold-webfont-webfont-webfont.ttf") format("truetype"), url("/fonts/nexa_bold-webfont-webfont-webfont.svg#nexa_boldregular") format("svg");
   font-weight: 100;
   font-style: normal; }
 
-/* line 57, ../sass/base.scss */
-.motif {
-  padding-left: 1em; }
-  /* line 58, ../sass/base.scss */
-  .motif:before {
-    content: url(/img/polygon.svg);
-    margin-right: .5rem;
-    position: absolute;
-    bottom: .1rem;
-    left: 0; }
-
-/* line 63, ../sass/base.scss */
+/* line 48, ../sass/base.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   color: white; }
 
-/* line 64, ../sass/base.scss */
+/* line 49, ../sass/base.scss */
 body, html {
   width: 100%;
   height: 100%;
   font-size: 100%;
   background: url(/img/grunge-texture.jpg);
-  font-family: cabin; }
+  font-family: Trebuchet MS, helvetica neue; }
+  @media only screen and (max-device-width: 480px) {
+    /* line 49, ../sass/base.scss */
+    body, html {
+      font-size: 70%; } }
 
-/* line 66, ../sass/base.scss */
+/* line 53, ../sass/base.scss */
 h1, h2, h3 {
   position: relative;
   font-family: nexa-bold, helvetica neue;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 2.25rem;
-  line-height: 3rem;
+  font-size: 1.75rem;
+  line-height: 2.5rem;
   color: white; }
+  @media only screen and (min-width: 647px) {
+    /* line 53, ../sass/base.scss */
+    h1, h2, h3 {
+      font-size: 2.25rem;
+      line-height: 3rem; } }
 
-/* line 67, ../sass/base.scss */
+/* line 56, ../sass/base.scss */
 h2 {
   font-size: 1.5em; }
 
-/* line 68, ../sass/base.scss */
+/* line 57, ../sass/base.scss */
 p {
-  font-family: helvetica neue;
-  font-size: 1rem;
+  font-size: .875rem;
   line-height: 1.75rem;
   color: #cccccc; }
 
-/* line 69, ../sass/base.scss */
+/* line 58, ../sass/base.scss */
 a {
   text-decoration: none; }
 
-/* line 70, ../sass/base.scss */
-img {
-  max-width: 100%; }
+/* line 61, ../sass/base.scss */
+form label {
+  line-height: 1em;
+  margin-bottom: .5rem;
+  display: block;
+  font-size: 0.75em;
+  color: #cccccc; }
+/* line 62, ../sass/base.scss */
+form input[type=text], form textarea {
+  width: 100%;
+  display: block;
+  clear: both;
+  margin-bottom: 1rem;
+  padding: 2em;
+  font-size: .75em; }
+/* line 63, ../sass/base.scss */
+form textarea {
+  height: 20rem;
+  line-height: 1.75em;
+  resize: vertical; }
+/* line 64, ../sass/base.scss */
+form input[type=submit] {
+  width: 100%;
+  padding: 1rem;
+  cursor: pointer; }
 
-/* line 72, ../sass/base.scss */
+/* line 67, ../sass/base.scss */
 footer.site-footer {
   background: black;
   padding: 1.3rem; }
 
-/* line 73, ../sass/base.scss */
+/* line 68, ../sass/base.scss */
 input[type=text], textarea {
   background: #212121;
   border: none;
@@ -144,129 +156,227 @@ div.pageContainer {
   position: relative;
   margin: 0 auto; }
 
-/* line 3, ../sass/layout.scss */
+/* line 4, ../sass/layout.scss */
 header[role=banner] {
   padding: 2em .5rem; }
-  /* line 4, ../sass/layout.scss */
+  /* line 5, ../sass/layout.scss */
   header[role=banner] #logo {
     width: 95%;
     margin: 0 auto;
-    display: block; }
-  /* line 5, ../sass/layout.scss */
+    display: block;
+    max-width: 42rem; }
+  /* line 6, ../sass/layout.scss */
   header[role=banner] nav {
     width: 14rem;
     display: block;
     margin: 1.5rem auto;
     overflow: hidden; }
-    /* line 6, ../sass/layout.scss */
+    @media only screen and (max-device-width: 480px) {
+      /* line 6, ../sass/layout.scss */
+      header[role=banner] nav {
+        font-size: 178%; } }
+    /* line 8, ../sass/layout.scss */
+    header[role=banner] nav a[role=button] {
+      width: 6rem; }
+    /* line 9, ../sass/layout.scss */
     header[role=banner] nav > a {
       float: left; }
-    /* line 7, ../sass/layout.scss */
+    /* line 10, ../sass/layout.scss */
     header[role=banner] nav > a + a {
       float: right; }
-  /* line 9, ../sass/layout.scss */
+  /* line 12, ../sass/layout.scss */
   header[role=banner] div.social-container {
     width: 8rem;
     font-size: 0.1px;
     text-align: justify;
     margin: 0 auto;
     height: 2rem; }
-    /* line 46, ../sass/base.scss */
+    /* line 35, ../sass/base.scss */
     header[role=banner] div.social-container:after {
       content: '';
       display: inline-block;
       width: 100%; }
-    /* line 10, ../sass/layout.scss */
+    /* line 13, ../sass/layout.scss */
     header[role=banner] div.social-container img {
       display: inline-block;
       width: auto;
       margin-bottom: 0;
       height: 100%; }
 
+/* line 18, ../sass/layout.scss */
+.contentBox {
+  background: rgba(0, 0, 0, 0.5);
+  position: relative;
+  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.75);
+  padding: 5%;
+  margin-bottom: 1rem; }
+
+/* line 26, ../sass/layout.scss */
+article.contentBox {
+  padding: 0 0 2rem 0;
+  width: 95%;
+  display: block;
+  margin: 1rem auto; }
+  /* line 27, ../sass/layout.scss */
+  article.contentBox h1 {
+    background: url(/img/diagonal-light.gif);
+    width: 100%;
+    padding: .5rem 1rem 0 1rem; }
+  /* line 28, ../sass/layout.scss */
+  article.contentBox p {
+    padding: 1rem; }
+
+/* line 30, ../sass/layout.scss */
+footer[role=contentinfo] {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40%;
+  background: url(/img/diagonal-dark.gif);
+  height: 1.5rem; }
+
+/* line 34, ../sass/layout.scss */
+footer.site-footer {
+  border-top: 0.25rem #2e2e2e solid; }
+  /* line 36, ../sass/layout.scss */
+  footer.site-footer div.about-me {
+    margin-bottom: 1em;
+    padding-bottom: 2em; }
+    /* line 37, ../sass/layout.scss */
+    footer.site-footer div.about-me a[role=button] {
+      margin-top: 1em; }
+  /* line 41, ../sass/layout.scss */
+  footer.site-footer div.contact section.contact-details span {
+    text-transform: uppercase; }
+  /* line 42, ../sass/layout.scss */
+  footer.site-footer div.contact section.contact-details p {
+    margin-bottom: 1.25rem; }
+
 /* line 4, ../sass/modules.scss */
 a[role=button], input[type=submit] {
-  font-family: nexa-bold;
+  font-family: Trebuchet MS;
+  font-weight: bold;
+  letter-spacing: 2px;
   background: #e85d5d;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
   border-radius: 8px;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=69);
-  opacity: 0.69;
+  background: rgba(232, 93, 93, 0.7);
   border: none;
   text-transform: uppercase;
   padding: .7em;
-  width: 6rem;
   display: inline-block;
   text-align: center;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
-  transition: all 0.2s ease; }
+  transition: all 0.2s ease;
+  font-size: .875rem; }
   /* line 5, ../sass/modules.scss */
   a[role=button]:hover, input[type=submit]:hover {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
-    opacity: 0.9;
+    background: rgba(232, 93, 93, 0.8);
     -webkit-box-shadow: inset 0 -1.5px #874040;
     -moz-box-shadow: inset 0 -1.5px #874040;
     box-shadow: inset 0 -1.5px #874040; }
 
+/* line 7, ../sass/modules.scss */
+a.arrow-right:after {
+  content: url("/img/arrow-right.gif");
+  position: relative;
+  margin-left: .5em; }
+
 /* line 9, ../sass/modules.scss */
+.motif {
+  padding-left: 1em; }
+  @media only screen and (max-device-width: 480px) {
+    /* line 9, ../sass/modules.scss */
+    .motif {
+      padding-left: 1.75em; } }
+  /* line 12, ../sass/modules.scss */
+  .motif:before {
+    content: url(/img/polygon.svg);
+    margin-right: .5rem;
+    position: absolute;
+    bottom: .1rem;
+    left: 0; }
+
+/* line 16, ../sass/modules.scss */
 header.title {
   margin: .5rem auto;
   width: 100%;
   overflow: hidden;
   width: 90%; }
-  /* line 10, ../sass/modules.scss */
-  header.title h1.line-right:after {
+  /* line 17, ../sass/modules.scss */
+  header.title h1.line-right:after, header.title h1.line-right-left:after, header.title h1.line-right-left:before {
     content: '';
     width: 100%;
     height: 2px;
-    background: #cccccc;
+    background: #cccccc; }
+  /* line 18, ../sass/modules.scss */
+  header.title h1.line-right:after {
+    margin-left: .5em;
     position: absolute;
-    margin-left: .75em;
     top: 50%;
-    margin-top: -.35rem;
-    margin-right: .5rem; }
-  /* line 11, ../sass/modules.scss */
-  header.title h1.line-right-left:after, header.title h1.line-right-left:before {
-    /* line styles either side */ }
-  /* line 12, ../sass/modules.scss */
+    margin-top: -.35rem; }
+  /* line 19, ../sass/modules.scss */
+  header.title h1.line-right-left {
+    text-align: center;
+    display: inline-block;
+    margin: 1em auto;
+    width: 100%;
+    float: left; }
+    /* line 20, ../sass/modules.scss */
+    header.title h1.line-right-left:after {
+      display: inline-block;
+      width: 20%;
+      float: right;
+      margin-top: .5em; }
+    /* line 21, ../sass/modules.scss */
+    header.title h1.line-right-left:before {
+      display: inline-block;
+      width: 20%;
+      float: left;
+      margin-top: .5em; }
+  /* line 24, ../sass/modules.scss */
   header.title p {
     font-size: 11px;
     color: #cccccc;
     margin-top: -.75rem; }
 
-/* line 16, ../sass/modules.scss */
+/* line 28, ../sass/modules.scss */
 ul.thumbGrid {
   width: 100%;
   margin: 0 auto;
   display: block;
   font-size: 0.1px;
   text-align: justify; }
-  /* line 46, ../sass/base.scss */
+  /* line 35, ../sass/base.scss */
   ul.thumbGrid:after {
     content: '';
     display: inline-block;
     width: 100%; }
-  /* line 17, ../sass/modules.scss */
+  /* line 29, ../sass/modules.scss */
   ul.thumbGrid li {
     display: inline-block;
     width: 47.5%;
     margin-bottom: 5%;
     position: relative; }
-    /* line 19, ../sass/modules.scss */
+    /* line 31, ../sass/modules.scss */
     ul.thumbGrid li img {
       -webkit-transition: all 0.3s ease;
       -moz-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
-      transition: all 0.3s ease; }
-      /* line 20, ../sass/modules.scss */
+      transition: all 0.3s ease;
+      width: 100%; }
+      /* line 32, ../sass/modules.scss */
       ul.thumbGrid li img:hover {
         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
         opacity: 0.75; }
-    /* line 22, ../sass/modules.scss */
+    /* line 34, ../sass/modules.scss */
     ul.thumbGrid li span {
       position: absolute;
       left: 0;
@@ -280,7 +390,7 @@ ul.thumbGrid {
       z-index: 200;
       font-size: 11px;
       line-height: 1.5rem; }
-  /* line 25, ../sass/modules.scss */
+  /* line 37, ../sass/modules.scss */
   ul.thumbGrid + a {
     text-align: center;
     display: block;
@@ -288,30 +398,6 @@ ul.thumbGrid {
     width: 6rem;
     margin: 0 auto;
     padding: .25rem 0; }
-    /* line 26, ../sass/modules.scss */
+    /* line 38, ../sass/modules.scss */
     ul.thumbGrid + a:hover {
       border-bottom: 1px #e85d5d solid; }
-
-/* line 32, ../sass/modules.scss */
-.contentBox {
-  background: rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0 0 18px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0 0 18px rgba(0, 0, 0, 0.75);
-  box-shadow: 0 0 18px rgba(0, 0, 0, 0.75);
-  padding: 5%;
-  margin-bottom: 1rem; }
-
-/* line 39, ../sass/modules.scss */
-article.contentBox {
-  padding: 0;
-  width: 95%;
-  display: block;
-  margin: 1rem auto; }
-  /* line 40, ../sass/modules.scss */
-  article.contentBox h1 {
-    background: url(/img/diagonal-light.gif);
-    width: 100%;
-    padding: .5rem 1rem 0 1rem; }
-  /* line 41, ../sass/modules.scss */
-  article.contentBox p {
-    padding: 1rem; }
