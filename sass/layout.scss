@@ -1,7 +1,7 @@
-div.pageContainer { position: relative; margin: 0 auto;
-	@media #{$golf} { width: 90%; }
+div.pageContainer { position: static; margin: 0 auto; max-width: 60rem; padding-bottom: 2rem;
+	@media #{$golf} { width: 95%; overflow: hidden; }
 }
-div.row {  }
+div.row { overflow: hidden; max-width: 60rem; margin: 0 auto; }
 
 // header
 header[role=banner] { padding: 2em .5rem;
@@ -13,22 +13,50 @@ header[role=banner] { padding: 2em .5rem;
 		& > a + a { float: right; }
 	}
 	div.social-container { width: 8rem; @include justify-container; margin: 0 auto; height: 2rem;
+		@media #{$campervan} { position: absolute; top: 1rem; right: 1rem; }
 		img { @include justify-child(auto, 0); height: 100%; }
 	}
 }
 
 // main content
-.contentBox { background: $black-transparent; position: relative; @include drop-shadow; padding: 5%; margin-bottom: 1rem; }
+.contentBox { background: $black-transparent; position: relative; @include drop-shadow; padding: 5%; margin-bottom: 1rem;
+	@media #{$golf} { padding: 1rem; }
+}
+
+// media row
+div.media { margin-bottom: 2rem;
+	header.title.line-right {
+		@media #{$golf} { width: 100%; }
+	}
+	div.gallery {
+		@media #{$golf} { display: inline-block; float: left; @include calc(width, "66.6% - .5rem"); }
+	}
+	div.music-player { 
+		@media #{$golf} { display: inline-block; float: right; @include calc(width, "33.3% - .5rem"); }
+	}
+}
+
 div.col-container {
-	div.col-3 {  }
+	@media #{$golf} { @include justify-container; margin-bottom: 2rem; }
+	
+	div.col-3 { 
+		@media #{$golf} { @include justify-child(calc(33.3% - .5rem), 0); @include justify-child(-moz-calc(33.3% - .5rem), 0); @include justify-child(-webkit-calc(33.3% - .5rem), 0); font-size: 16px; /* reset font size */ }
+	}
 }
 
 
 
 // articles
 article.contentBox { padding: 0 0 2rem 0; width: 95%; display: block; margin: 1rem auto;
-	h1 { background: url(/img/diagonal-light.gif); width: 100%; padding: .5rem 1rem 0 1rem; } // use jQuery plugin to target last words
-	p { padding: 1rem; }
+	@media #{$golf} { @include calc(width, "50% - .5rem"); float: left; }
+	&:nth-of-type(2n) { 
+		@media #{$golf} { float: right; }
+	}
+	&:nth-of-type(1), &:nth-of-type(2) { 
+		@media #{$golf} { margin-top: -1rem; }
+	}
+	h2 { background: url(/img/diagonal-light.gif); width: 100%; padding: 1.25rem 1rem 1rem 1rem; line-height: 1.25em; } // use jQuery plugin to target last words
+	p { padding: 1rem; height: 12rem; overflow: hidden; }
 }
 footer[role=contentinfo] { position: absolute; bottom: 0; left: 0; width: 10rem; background: url(/img/diagonal-dark.gif); height: 1.5rem; padding-left: 1rem; @include opacity(.85);
 	i { float: left; margin-right: .5rem; }
@@ -38,14 +66,25 @@ footer[role=contentinfo] { position: absolute; bottom: 0; left: 0; width: 10rem;
 
 // footer 
 footer.site-footer { border-top: .25rem lighten($grey-dark, 5%) solid;
-	div.container {  }
-	div.about-me { margin-bottom: 1em; padding-bottom: 2em;
+	@media #{$golf} { @include justify-container; }
+	div.about-me { margin-bottom: 1em; padding-bottom: 2em; 
+		@media #{$golf} { @include justify-child(33%, 0); float: left; }
+		p { font-size: .75rem; line-height: 1.25rem; }
 		a[role=button] { margin-top: 1em }
 	}
 	div.contact {
-		section.contact-details { 
-			span { text-transform: uppercase; }
-			p { margin-bottom: 1.25rem; }
+		@media #{$golf} { overflow: hidden; @include justify-child(65%, 0); float: right; }
+		section.contact-details {
+			@media #{$golf} { width: 33%; float: left; }
+			span { text-transform: uppercase;
+				@media #{$golf} { font-size: 14px; }
+			}
+			p { margin-bottom: 1.25rem;
+				@media #{$golf} { font-size: 14px; }
+			}
+		}
+		section.form {
+			@media #{$golf} { width: 66%; float: right; font-size: 14px; }
 		}
 	}
 }

@@ -32,14 +32,20 @@ $layer-3: 300;
 @mixin drop-shadow { @include box-shadow(0 0 1rem rgba(0, 0, 0, 0.75)); }
 
 @mixin justify-container { font-size: 0.1px; text-align: justify;
-	&:after { content: ''; display: inline-block; width: 100%; }
+	&:after { content: ''; display: inline-block; width: 100%; @include translateX(-10px); }
 }
 @mixin justify-child($width, $vertical) { display: inline-block; width: $width; margin-bottom: $vertical; }
+@mixin calc($property, $expression) { 
+  #{$property}: -moz-calc(#{$expression}); 
+  #{$property}: -o-calc(#{$expression}); 
+  #{$property}: -webkit-calc(#{$expression}); 
+  #{$property}: calc(#{$expression}); 
+} 
 
 // breakpoints (not proper values yet)
 $polo: 'only screen and (max-device-width: 480px)';
-$golf: 'only screen and (min-width: 647px)';
-$campervan: 'only screen and (min-width: 768px)';
+$golf: 'only screen and (min-width: 750px)';
+$campervan: 'only screen and (min-width: 1040px)';
 
 
 
@@ -48,21 +54,23 @@ $campervan: 'only screen and (min-width: 768px)';
 * { @include box-sizing(border-box); color: white; }
 body, html { width: 100%; height: 100%; font-size: 100%; background: url(/img/grunge-texture.jpg); font-family: Trebuchet MS, helvetica neue;
 	@media #{$polo} { font-size: 70%; }
+	@media #{$golf} { background: url(/img/the-dot.png), url('/img/big-background-image.png') 50% 0 no-repeat, url(/img/grunge-texture.jpg); }
 }
 
 h1, h2, h3 { position: relative; font-family: nexa-bold, helvetica neue; text-transform: uppercase; letter-spacing: 2px; font-size: 1.75rem; line-height: 2.5rem; color: white;
 	@media #{$golf} { font-size: 2.25rem; line-height: 3rem; }
 }
-h2 { font-size: 1.5em; }
+h2 { font-size: 1.5rem; }
 p { font-size: .875rem; line-height: 1.75rem; color: $grey-light; }
 a { text-decoration: none; }
 
 form {
 	label { line-height: 1em; margin-bottom: .5rem; display: block; font-size: 0.75em; color: $grey-light; }
 	input[type=text], textarea { width: 100%; display: block; clear: both; margin-bottom: 1rem; padding: 2em; font-size: .75em; }
-	textarea { height: 20rem; line-height: 1.75em; resize: vertical; }
+	textarea { height: 10rem; line-height: 1.75em; resize: vertical; }
 	input[type=submit] { width: 100%; padding: 1rem; cursor: pointer; }
 }
+
 
 footer.site-footer { background: black; padding: 1.3rem; }
 input[type=text], textarea { background: $grey-dark; border: none; outline: black; height: 1.5em; }

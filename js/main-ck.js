@@ -1,0 +1,1 @@
+var openSpan='<span class="red">',closeSpan="</span>";$("article h2").each(function(){var e=$(this).text();e=e.split(" ");spanOpenPos=e.length-2;e.push(closeSpan);e.splice(spanOpenPos,0,openSpan);e=e.join(" ");$(this).html(e)});
