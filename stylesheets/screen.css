@@ -141,7 +141,8 @@ form textarea {
 form input[type=submit] {
   width: 100%;
   padding: 1rem;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-appearance: none; }
 
 /* line 75, ../sass/base.scss */
 footer.site-footer {
@@ -497,10 +498,11 @@ i.calendar {
 p.calendar:before {
   content: url(/img/calendar.svg);
   display: inline-block;
-  width: 1.5rem;
+  width: 1.5em;
   height: 2rem;
   position: relative;
-  margin-top: 1px; }
+  margin-top: 1px;
+  margin-right: 1em; }
 
 /* line 21, ../sass/modules.scss */
 header.title {
@@ -640,3 +642,12 @@ ul.thumbGrid {
 /* line 1, ../sass/styles.scss */
 .red {
   color: #e85d5d; }
+
+/* line 3, ../sass/styles.scss */
+.chromeframe {
+  width: 50%;
+  margin: 50px auto;
+  display: block;
+  position: relative;
+  background: black;
+  padding: 2em; }

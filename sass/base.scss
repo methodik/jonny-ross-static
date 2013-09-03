@@ -68,7 +68,7 @@ form {
 	label { line-height: 1em; margin-bottom: .5rem; display: block; font-size: 0.75em; color: $grey-light; }
 	input[type=text], textarea { width: 100%; display: block; clear: both; margin-bottom: 1rem; padding: 2em; font-size: .75em; }
 	textarea { height: 10rem; line-height: 1.75em; resize: vertical; }
-	input[type=submit] { width: 100%; padding: 1rem; cursor: pointer; }
+	input[type=submit] { width: 100%; padding: 1rem; cursor: pointer; -webkit-appearance: none; }
 }
 
 

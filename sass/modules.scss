@@ -16,7 +16,7 @@ a.arrow-right:after { content: url('/img/arrow-right.gif'); position: relative; 
 i { display: block; height: 2rem; width: 1.5rem; display: inline-block; }
 i.facebook { background: url(/img/like.svg) 50% 25% no-repeat; }
 i.calendar { background: url(/img/calendar.svg) 50% 25% no-repeat; }
-p.calendar:before { content: url(/img/calendar.svg); display: inline-block; width: 1.5rem; height: 2rem; position: relative; margin-top: 1px; }
+p.calendar:before { content: url(/img/calendar.svg); display: inline-block; width: 1.5em; height: 2rem; position: relative; margin-top: 1px; margin-right : 1em; }
 
 header.title { margin: .5rem auto; width: 100%; overflow: hidden; width: 90%;
 	@media #{$golf} { width: 100%; }
